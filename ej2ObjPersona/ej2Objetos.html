@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br>
+        <h1>Manejo datos Tipo Objetos</h1>
+        <hr noshade="noshade" color="red" size="3" width="50%">
+        <br>
+        <table border="3">
+            <th>Propiedad</th>
+            <th>Valor</th>
+            <tbody>
+                <tr>
+                    <td>Cedula</td>
+                    <td><input type="text" name="ced" id="ced" placeholder="Digite Cédula" autofocus></td>
+                </tr>
+                <tr>
+                    <td>Nombres</td>
+                    <td><input type="text" name="nom" id="nom" placeholder="Digite Nombres"></td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" name="ape" id="ape" placeholder="Digite Apellidos"></td>
+                </tr>
+                <tr>
+                    <td>Dirección</td>
+                    <td><input type="text" name="dir" id="dir" placeholder="Digite Dirección"></td>
+                </tr>
+                <tr>
+                    <td>Nota 1</td>
+                    <td><input type="text" name="n1" id="n1" placeholder="Digite Nota 1"></td>
+                </tr>
+                <tr>
+                    <td>Nota 2</td>
+                    <td><input type="text" name="n2" id="n2" placeholder="Digite Nota 2"></td>
+                </tr>
+                <tr>
+                    <td>Nota 3</td>
+                    <td><input type="text" name="n3" id="n3" placeholder="Digite Nota 3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table border="3">
+            <tr>
+                <td>
+                    <button id="agr"  onclick="agregar()">Agregar</button>
+                    <button  id="act" onclick="actualizar()">Actualizar</button>
+                </td>
+                <td>
+                    Seleccione Criterio: <select  id="opc" onchange="filtrarArray()">
+                        <option value="">Criterio a Evaluar</option>
+                        <option value="0">Nota Final >= 3.0</option>
+                        <option value="1">Nota Final < 3.0</option>
+                        <option value="2">Nota Final entre 1 y 2</option>
+                        <option value="3">Nota Final entre 4 y 5</option>
+                    </select>
+                </td>
+            </tr>
+        </table> 
+        <br>
+        selecione propiedad modificar
+        <select id="sel">
+            <option value="0">Cédula</option>
+            <option value="1">Nombres</option>
+            <option value="2">Apellidos</option>
+            <option value="3">Dirección</option>
+        </select>
+        <button onclick="modificar()">Modificar</button>
+        <button onclick="eliminar()">Eliminar</button>
+        <br>
+        <h2>Listados de estudiantes</h2>
+        <br>
+        <table border="3">
+            <th>Cédula</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota Final</th>
+            <th>Opciones</th>
+            <tbody id="cuerpo"></tbody>
+        </table>
+        <br>
+        <h2>Listado de Estudiantes Filtrado</h2>
+        <br>
+        <table border="3">
+            <th>Cédula</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota Final</th>
+            <th>Opciones</th>
+            <tbody id="cuerpo1"></tbody>
+        </table>
+    </center>
+
+    <script src="ej2Objetos.js"></script>
+</body>
+</html>
